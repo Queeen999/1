@@ -1,12 +1,10 @@
-<script>
-    document.write(unescape('<!DOCTYPE html>'));
-</script>
+<!DOCTYPE html>
 <html lang="pl">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mobywatel-kracz-collab </title>
+    <title>mobywatel-kracz-collab</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
@@ -66,7 +64,6 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -94,7 +91,6 @@
             font-weight: 400;
         }
 
-        /* Accordion / Instructions */
         details.instruction-details {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border-color);
@@ -167,7 +163,6 @@
             font-weight: 600;
         }
 
-        /* Form Grid Layout */
         #dataGenerator {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -180,7 +175,6 @@
             width: 100%;
         }
 
-        /* Items that span full width in grid */
         .full-width {
             grid-column: 1 / -1;
         }
@@ -244,7 +238,6 @@
             background-size: 16px;
         }
 
-        /* Autofill Block */
         .autofill-block {
             background: rgba(59, 130, 246, 0.08);
             border: 1px dashed rgba(59, 130, 246, 0.3);
@@ -253,7 +246,6 @@
             text-align: center;
             transition: all 0.3s ease;
             grid-column: 1 / -1;
-            /* full width */
             margin: 8px 0;
         }
 
@@ -281,11 +273,6 @@
             box-shadow: 0 4px 12px var(--secondary-glow);
         }
 
-        #autofillButton::before {
-            content: "(";
-            font-size: 1.2rem;
-        }
-
         #autofillButton:hover {
             background: var(--secondary-hover);
             transform: translateY(-1px);
@@ -304,7 +291,6 @@
             min-height: 18px;
         }
 
-        /* File Upload */
         .file-upload-wrapper {
             position: relative;
         }
@@ -332,22 +318,10 @@
             text-align: center;
         }
 
-        .custom-file-upload::before {
-            content: "=ø";
-            font-size: 2.5rem;
-            opacity: 0.8;
-            margin-bottom: 4px;
-            transition: transform 0.3s ease;
-        }
-
         .custom-file-upload:hover {
             border-color: var(--primary);
             background: rgba(139, 92, 246, 0.05);
             color: var(--primary);
-        }
-
-        .custom-file-upload:hover::before {
-            transform: scale(1.1);
         }
 
         .image-preview-container {
@@ -380,14 +354,12 @@
                 opacity: 0;
                 transform: scale(0.95);
             }
-
             to {
                 opacity: 1;
                 transform: scale(1);
             }
         }
 
-        /* Bottom Controls Wrapper (to center the button cleanly) */
         .bottom-controls {
             grid-column: 1 / -1;
             display: flex;
@@ -396,7 +368,6 @@
             margin-top: 24px;
         }
 
-        /* Submit Button */
         #generateButton {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -464,40 +435,11 @@
             grid-column: 1 / -1;
         }
 
-        /* Footer */
         .footer-dev {
             text-align: center;
             display: flex;
             justify-content: center;
             margin-top: 20px;
-        }
-
-        .discord-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(88, 101, 242, 0.1);
-            color: #f8fafc;
-            padding: 12px 24px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            border: 1px solid rgba(88, 101, 242, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .discord-btn:hover {
-            background: rgba(88, 101, 242, 0.2);
-            border-color: #5865F2;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.2);
-        }
-
-        .discord-btn img {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
         }
 
         .credits_container {
@@ -516,43 +458,38 @@
     <div class="container">
         <div class="header">
             <h1>kracz-collab 6.9.4.2.0</h1>
-            <div class="subtitle">Generator mObywatela </div>
-
+            <div class="subtitle">Generator mObywatela</div>
         </div>
 
         <details class="instruction-details">
             <summary>
                 Instrukcja instalacji
-                <span class="icon">¶</span>
+                <span class="icon">▼</span>
             </summary>
             <div class="instruction-content">
-                <p>Aby aplikacja dziaBaBa jak skrót na pulpicie telefonu (bez paska adresu przegldarki), postpuj
-                    zgodnie z krokami.</p>
+                <p>Aby aplikacja działała jak skrót na pulpicie telefonu (bez paska adresu przeglądarki), postępuj zgodnie z krokami.</p>
 
-                <strong style="counter-reset: step-counter;">System iOS (iPhone): =ñ</strong>
+                <strong>System iOS (iPhone):</strong>
                 <ol>
-                    <li>Upewnij si, |e u|ywasz przegldarki Safari.</li>
-                    <li>UzupeBnij dane i kliknij GENERUJ.</li>
-                    <li>Na nowej stronie naci[nij ikon Udostpnij.</li>
-                    <li>Wybierz opcj "Do Ekranu gBównego".</li>
-                    <li>skocz z mostu jak nie zadziaBa bo ja nie umiem w kodowanie xdd</li>
+                    <li>Upewnij się, że używasz przeglądarki Safari.</li>
+                    <li>Uzupełnij dane i kliknij GENERUJ.</li>
+                    <li>Na nowej stronie naciśnij ikonę Udostępnij.</li>
+                    <li>Wybierz opcję "Do Ekranu głównego".</li>
                 </ol>
 
-                <strong style="counter-reset: step-counter;">System Android: ></strong>
+                <strong>System Android:</strong>
                 <ol>
-                    <li>Upewnij si, |e u|ywasz przegldarki Chrome lub Google.</li>
-                    <li>UzupeBnij dane i kliknij GENERUJ.</li>
-                    <li>Na nowej stronie naci[nij ikon Menu (3 kropki) w prawym górnym rogu.</li>
-                    <li>Wybierz opcj "Dodaj do ekranu gBównego".</li>
-                    <li>skocz z mostu jak nie zadziaBa bo ja nie umiem w kodowanie xdd</li>
+                    <li>Upewnij się, że używasz przeglądarki Chrome lub Google.</li>
+                    <li>Uzupełnij dane i kliknij GENERUJ.</li>
+                    <li>Na nowej stronie naciśnij ikonę Menu (3 kropki) w prawym górnym rogu.</li>
+                    <li>Wybierz opcję "Dodaj do ekranu głównego".</li>
                 </ol>
             </div>
         </details>
 
         <form id="dataGenerator">
-            <!-- Pierwsza kolumna - Dane podstawowe -->
             <div class="form-group">
-                <label for="name">Imi</label>
+                <label for="name">Imię</label>
                 <input type="text" id="name" name="name" placeholder="np. Jan" required>
             </div>
 
@@ -562,9 +499,9 @@
             </div>
 
             <div class="form-group">
-                <label for="sex">PBe</label>
+                <label for="sex">Płeć</label>
                 <select id="sex" name="sex" required>
-                    <option value="M{CZYZNA">M|czyzna</option>
+                    <option value="MĘŻCZYZNA">Mężczyzna</option>
                     <option value="KOBIETA">Kobieta</option>
                 </select>
             </div>
@@ -575,14 +512,13 @@
             </div>
 
             <div class="autofill-block">
-                <button type="button" id="autofillButton">WypeBnij daty automatycznie</button>
+                <button type="button" id="autofillButton">Wypełnij daty automatycznie</button>
                 <div id="statusMessageAutofill"></div>
             </div>
 
             <div class="form-group">
                 <label for="pesel">Numer PESEL</label>
-                <input type="text" id="pesel" name="pesel" placeholder="11-cyfrowy numer" maxlength="11"
-                    pattern="[0-9]{11}" required>
+                <input type="text" id="pesel" name="pesel" placeholder="11-cyfrowy numer" maxlength="11" pattern="[0-9]{11}" required>
             </div>
 
             <div class="form-group">
@@ -592,24 +528,21 @@
 
             <div class="form-group">
                 <label for="issue_date">Data wydania mDowodu (DD.MM.RRRR)</label>
-                <input type="text" id="issue_date" name="issue_date" placeholder="np. 14.07.2023" maxlength="10"
-                    pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" required>
+                <input type="text" id="issue_date" name="issue_date" placeholder="np. 14.07.2023" maxlength="10" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" required>
             </div>
 
             <div class="form-group">
-                <label for="expiry_date">Termin wa|no[ci mDowodu (DD.MM.RRRR)</label>
-                <input type="text" id="expiry_date" name="expiry_date" placeholder="np. 14.07.2028" maxlength="10"
-                    pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" required>
+                <label for="expiry_date">Termin ważności mDowodu (DD.MM.RRRR)</label>
+                <input type="text" id="expiry_date" name="expiry_date" placeholder="np. 14.07.2028" maxlength="10" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" required>
             </div>
 
-            <!-- Kolejne dane -->
             <div class="form-group">
-                <label for="father_name">Imi ojca</label>
+                <label for="father_name">Imię ojca</label>
                 <input type="text" id="father_name" name="father_name" placeholder="np. Maciej" required>
             </div>
 
             <div class="form-group">
-                <label for="mother_name">Imi matki</label>
+                <label for="mother_name">Imię matki</label>
                 <input type="text" id="mother_name" name="mother_name" placeholder="np. Ewa" required>
             </div>
 
@@ -645,13 +578,12 @@
 
             <div class="form-group">
                 <label for="home_date">Data zameldowania (DD.MM.RRRR)</label>
-                <input type="text" id="home_date" name="home_date" placeholder="np. 01.01.2000" maxlength="10"
-                    pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" required>
+                <input type="text" id="home_date" name="home_date" placeholder="np. 01.01.2000" maxlength="10" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" required>
             </div>
 
             <div class="form-group">
                 <label for="family_name">Nazwisko rodowe (Twoje)</label>
-                <input type="text" id="family_name" name="family_name" placeholder="Kowalski / PanieDskie">
+                <input type="text" id="family_name" name="family_name" placeholder="Kowalski / Panieńskie">
             </div>
 
             <div class="form-group">
@@ -667,16 +599,13 @@
             <div class="divider"></div>
 
             <div class="form-group full-width">
-                <label for="fileInput">Zdjcie profilowe</label>
+                <label for="fileInput">Zdjęcie profilowe</label>
                 <div class="file-upload-wrapper">
                     <input type="file" id="fileInput" accept="image/jpeg, image/png" required>
-
                     <label for="fileInput" id="fileLabel" class="custom-file-upload">Wybierz plik z dysku...</label>
-
                     <label for="fileInput" class="image-preview-container" id="imagePreviewContainer">
-                        <img id="imagePreview" src="#" alt="Podgld zdjcia">
+                        <img id="imagePreview" src="#" alt="Podgląd zdjęcia">
                     </label>
-
                     <input type="hidden" id="image" name="image" value="">
                 </div>
             </div>
@@ -687,23 +616,20 @@
 
                 <div class="footer-dev">
                     <div class="credits_container">
-                        Made with d by <span class="credits_name">Jatrogzz</span>
-                        <a href="https://discord.gg/5Fuy73ynwr" target="_blank"
-                            class="credits_discord">https://discord.gg/5Fuy73ynwr</a>
+                        Made with ❤️ by <span class="credits_name">Jatrogzz</span>
+                        <a href="https://discord.gg/5Fuy73ynwr" target="_blank" class="credits_discord">https://discord.gg/5Fuy73ynwr</a>
                     </div>
                 </div>
             </div>
-    </div>
-
-    </form>
+        </form>
     </div>
 
     <script>
         // =========================================================
-        //         KONFIGURACJA CLOUDINARY - ZMIEC TO!
+        //         KONFIGURACJA CLOUDINARY - ZMIEŃ TO!
         // =========================================================
-        const CLOUD_NAME = 'dfbfnkw4d';           // <--- ZMIEC NA SWÓJ KLUCZ
-        const UPLOAD_PRESET = 'obywatelqba'; // <--- ZMIEC NA SWÓJ KLUCZ
+        const CLOUD_NAME = 'dfbfnkw4d';           
+        const UPLOAD_PRESET = 'obywatelqba'; 
         // =========================================================
 
         const form = document.getElementById('dataGenerator');
@@ -723,11 +649,7 @@
         const homeDateInput = document.getElementById('home_date');
         const birthdayInput = document.getElementById('birthday');
 
-        const manualDateFields = [
-            issueDateInput,
-            expiryDateInput,
-            homeDateInput,
-        ];
+        const manualDateFields = [issueDateInput, expiryDateInput, homeDateInput];
 
         function formatDateForDisplay(date) {
             if (!(date instanceof Date) || isNaN(date)) return '';
@@ -752,7 +674,7 @@
             statusMessageAutofill.style.color = 'var(--error-red)';
 
             if (!birthDateValue) {
-                statusMessageAutofill.textContent = 'BAD: Najpierw wybierz Dat Urodzenia z kalendarza!';
+                statusMessageAutofill.textContent = 'BŁĄD: Najpierw wybierz Datę Urodzenia z kalendarza!';
                 return;
             }
 
@@ -774,7 +696,6 @@
                 if (issueDate > today) {
                     issueDate = new Date(today.getTime());
                 }
-
             } else {
                 issueDate = new Date(birthDate.getTime());
                 issueDate.setFullYear(issueDate.getFullYear() + 13);
@@ -806,11 +727,8 @@
             let later = "0295";
             if (sexLower.indexOf('kob') !== -1) later = "0382";
 
-            let dayStr = String(birthDay);
-            let monthForPesel = peselMonth;
-            if (birthDay < 10) dayStr = "0" + dayStr;
-            let monthStr = String(monthForPesel);
-            if (monthForPesel < 10) monthStr = "0" + monthStr;
+            let dayStr = String(birthDay).padStart(2, '0');
+            let monthStr = String(peselMonth).padStart(2, '0');
 
             const generatedPesel = String(birthYearMod).padStart(2, '0') + monthStr + dayStr + later + "7";
             peselInput.value = generatedPesel.substring(0, 11);
@@ -822,32 +740,23 @@
             homeDateInput.value = formatDateForDisplay(homeDate);
 
             statusMessageAutofill.style.color = 'var(--success-green)';
-            statusMessageAutofill.textContent = 'Daty i numery zostaBy wygenerowane pomy[lnie! ';
+            statusMessageAutofill.textContent = 'Daty i numery zostały wygenerowane pomyślnie!';
         });
 
         function validateDateFormat(input) {
             const datePattern = new RegExp(input.pattern);
             if (!input.value) return !input.required;
-
-            if (input.value.length !== 10 || !datePattern.test(input.value)) {
-                return false;
-            }
-            return true;
+            return input.value.length === 10 && datePattern.test(input.value);
         }
 
         function validatePeselFormat(input) {
             const peselPattern = new RegExp(input.pattern);
             if (!input.value) return !input.required;
-
-            if (input.value.length !== 11 || !peselPattern.test(input.value)) {
-                return false;
-            }
-            return true;
+            return input.value.length === 11 && peselPattern.test(input.value);
         }
 
         fileInput.addEventListener('change', function () {
             statusMessage.textContent = '';
-
             const file = this.files[0];
 
             if (file) {
@@ -861,7 +770,7 @@
                 reader.readAsDataURL(file);
 
                 imageURLInput.value = '';
-                statusMessage.textContent = 'Zdjcie zaBadowane - gotowe do wysyBki!';
+                statusMessage.textContent = 'Zdjęcie załadowane - gotowe do wysyłki!';
                 statusMessage.style.color = 'var(--text-main)';
             } else {
                 fileLabel.style.display = 'flex';
@@ -875,12 +784,12 @@
         async function uploadToCloudinary(file) {
             if (CLOUD_NAME.startsWith('TWÓJ') || UPLOAD_PRESET.startsWith('TWÓJ')) {
                 statusMessage.style.color = 'var(--error-red)';
-                statusMessage.textContent = 'BAD: ZmieD CLOUD_NAME i UPLOAD_PRESET w kodzie JS!';
+                statusMessage.textContent = 'BŁĄD: Zmień CLOUD_NAME i UPLOAD_PRESET w kodzie JS!';
                 return null;
             }
 
             statusMessage.style.color = 'var(--text-main)';
-            statusMessage.textContent = 'Aadowanie zdjcia na serwer... ó';
+            statusMessage.textContent = 'Ładowanie zdjęcia na serwer...';
             generateButton.disabled = true;
 
             const formData = new FormData();
@@ -897,18 +806,16 @@
 
                 if (data.url) {
                     statusMessage.style.color = 'var(--success-green)';
-                    statusMessage.textContent = 'Zdjcie przetworzone pomy[lnie!  Przekierowywanie...';
+                    statusMessage.textContent = 'Zdjęcie przetworzone pomyślnie! Przekierowywanie...';
                     return data.url;
                 } else {
                     statusMessage.style.color = 'var(--error-red)';
-                    statusMessage.textContent = 'BBd serwera: ' + (data.error && data.error.message ? data.error.message : 'Nieznany bBd.');
-                    console.error('BBd Cloudinary:', data);
+                    statusMessage.textContent = 'Błąd serwera: ' + (data.error && data.error.message ? data.error.message : 'Nieznany błąd.');
                     return null;
                 }
             } catch (error) {
                 statusMessage.style.color = 'var(--error-red)';
-                statusMessage.textContent = 'BBd sieci/API. Sprawdz poBczenie.';
-                console.error('BBd Fetch:', error);
+                statusMessage.textContent = 'Błąd sieci/API. Sprawdź połączenie.';
                 return null;
             } finally {
                 generateButton.disabled = false;
@@ -921,7 +828,7 @@
             for (const input of manualDateFields) {
                 if (!validateDateFormat(input)) {
                     statusMessage.style.color = 'var(--error-red)';
-                    statusMessage.textContent = `BAD: Pole ${input.previousElementSibling.textContent} musi by w formacie DD.MM.RRRR!`;
+                    statusMessage.textContent = `BŁĄD: Pole ${input.previousElementSibling.textContent} musi być w formacie DD.MM.RRRR!`;
                     input.focus();
                     return;
                 }
@@ -929,7 +836,7 @@
 
             if (!validatePeselFormat(peselInput)) {
                 statusMessage.style.color = 'var(--error-red)';
-                statusMessage.textContent = 'BAD: Numer PESEL musi zawiera 11 cyfr!';
+                statusMessage.textContent = 'BŁĄD: Numer PESEL musi zawierać 11 cyfr!';
                 peselInput.focus();
                 return;
             }
@@ -937,18 +844,14 @@
             if (!fileInput.files || fileInput.files.length === 0) {
                 if (!imageURLInput.value) {
                     statusMessage.style.color = 'var(--error-red)';
-                    statusMessage.textContent = 'Wybierz plik zdjcia, aby kontynuowa!';
+                    statusMessage.textContent = 'Wybierz plik zdjęcia, aby kontynuować!';
                     return;
                 }
             }
 
             if (imageURLInput.value === '') {
                 const imageUrl = await uploadToCloudinary(fileInput.files[0]);
-
-                if (!imageUrl) {
-                    return;
-                }
-
+                if (!imageUrl) return;
                 imageURLInput.value = imageUrl;
             }
 
@@ -964,8 +867,7 @@
 
             for (const input of allInputs) {
                 const rawKey = input.name;
-                if (!rawKey) continue;
-                if (rawKey === 'fileInput') continue;
+                if (!rawKey || rawKey === 'fileInput') continue;
 
                 let value = input.value || "";
 
@@ -975,11 +877,7 @@
 
                 if (rawKey === 'sex') {
                     const v = (value || "").toString().toLowerCase();
-                    if (v.indexOf('kob') !== -1 || v.indexOf('k') === 0) {
-                        value = 'k';
-                    } else {
-                        value = 'm';
-                    }
+                    value = (v.indexOf('kob') !== -1 || v.indexOf('k') === 0) ? 'k' : 'm';
                 }
 
                 if (rawKey === 'image' && imageURLInput.value) {
@@ -987,7 +885,6 @@
                 }
 
                 const finalKey = nameMap[rawKey] || rawKey;
-
                 params.push(`${finalKey}=${encodeURIComponent(value)}`);
             }
 
@@ -995,8 +892,5 @@
             window.location.href = targetUrl;
         });
     </script>
-
 </body>
-
-</html>'))
-</script>
+</html>
