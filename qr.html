@@ -110,6 +110,12 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
+        #qr-code {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+
         .qr-image-src {
             width: 100%;
             height: 100%;
@@ -312,7 +318,7 @@
                 <div class="corner bottom-right"></div>
                 
                 <div class="qr-container">
-                    <canvas id="qr-canvas"></canvas>
+                    <div id="qr-code"></div>
                 </div>
             </div>
 
@@ -367,12 +373,12 @@
         let timerInterval;
 
         function generateQRCode() {
-            const canvas = document.getElementById('qr-canvas');
+            const qrContainer = document.getElementById('qr-code');
             // Czyść poprzedni kod
-            canvas.innerHTML = '';
+            qrContainer.innerHTML = '';
             
-            // Generuj nowy kod QR (możesz zmienić URL na swój)
-            new QRCode(canvas, {
+            // Generuj nowy kod QR
+            new QRCode(qrContainer, {
                 text: "https://kracz-collab.github.io/mobywatel.new.official/qr.html",
                 width: 208,
                 height: 208,
