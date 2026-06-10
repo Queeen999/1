@@ -8,12 +8,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
         :root {
-            --bg-black: #000000;
-            --bg-dark: #0a0a0c;
-            --primary-blue: #0084ff;
+            --bg-black: #0c0d12;
+            --bg-dark: #111319;
+            --primary-blue: #1e6bf1;
             --text-main: #ffffff;
-            --text-muted: #8e8e93;
-            --success-green: #30d158;
+            --text-muted: #848995;
+            --success-green: #2ecc71;
+            --border-color: #1f232d;
         }
 
         * {
@@ -31,7 +32,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            justify-content: space-between;
         }
 
         /* Nagłówek aplikacji */
@@ -39,134 +40,150 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px;
-            background-color: var(--bg-dark);
-            border-bottom: 1px solid #1c1c1e;
+            padding: 16px 20px;
+            background-color: var(--bg-black);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .back-btn {
             color: var(--primary-blue);
             text-decoration: none;
-            font-size: 17px;
+            font-size: 16px;
+            font-weight: 500;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             cursor: pointer;
         }
 
         .header-title {
             font-size: 17px;
             font-weight: 600;
+            letter-spacing: -0.3px;
         }
 
-        /* Ekrany aplikacji */
-        .screen {
+        .help-icon {
+            font-size: 20px;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        /* Główny obszar */
+        .main-content {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 20px;
-            transition: opacity 0.3s ease;
+        }
+
+        .screen {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .hidden {
             display: none !important;
         }
 
-        /* Kontener Kodu QR z narożnikami */
-        .qr-container {
+        /* Kontener Kodu QR z oryginalnymi narożnikami */
+        .qr-wrapper {
             position: relative;
-            width: 260px;
-            height: 260px;
-            background-color: #ffffff; /* Białe tło dla czytelności kodu QR */
+            padding: 15px;
+            margin-bottom: 35px;
+            cursor: pointer;
+        }
+
+        .qr-container {
+            width: 240px;
+            height: 240px;
+            background-color: #ffffff;
+            border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            cursor: pointer;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            padding: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        /* Obrazek kodu QR */
         .qr-image-src {
-            width: 220px;
-            height: 220px;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
             display: block;
-            transition: opacity 0.3s ease;
         }
 
-        /* Niebieskie narożniki wysunięte lekko na zewnątrz */
+        /* Białe, zaokrąglone narożniki wokół kodu */
         .corner {
             position: absolute;
-            width: 35px;
-            height: 35px;
-            border: 4px solid var(--primary-blue);
+            width: 45px;
+            height: 45px;
+            border: 3px solid #ffffff;
             pointer-events: none;
-            z-index: 10;
         }
 
         .top-left {
-            top: -10px;
-            left: -10px;
+            top: 0;
+            left: 0;
             border-right: none;
             border-bottom: none;
-            border-top-left-radius: 12px;
+            border-top-left-radius: 28px;
         }
 
         .top-right {
-            top: -10px;
-            right: -10px;
+            top: 0;
+            right: 0;
             border-left: none;
             border-bottom: none;
-            border-top-right-radius: 12px;
+            border-top-right-radius: 28px;
         }
 
         .bottom-left {
-            bottom: -10px;
-            left: -10px;
+            bottom: 0;
+            left: 0;
             border-right: none;
             border-top: none;
-            border-bottom-left-radius: 12px;
+            border-bottom-left-radius: 28px;
         }
 
         .bottom-right {
-            bottom: -10px;
-            right: -10px;
+            bottom: 0;
+            right: 0;
             border-left: none;
             border-top: none;
-            border-bottom-right-radius: 12px;
+            border-bottom-right-radius: 28px;
         }
 
-        /* Sekcja licznika */
+        /* Sekcja odliczania i paska */
         .timer-section {
             width: 100%;
-            max-width: 300px;
+            max-width: 280px;
             text-align: center;
         }
 
         .timer-text {
-            font-size: 16px;
+            font-size: 14px;
             color: var(--text-muted);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .timer-countdown {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             color: var(--primary-blue);
-            margin-bottom: 15px;
-            letter-spacing: 1px;
+            margin-bottom: 14px;
         }
 
         /* Pasek Postępu */
         .progress-bar-container {
             width: 100%;
-            height: 6px;
-            background-color: #1c1c1e;
-            border-radius: 3px;
+            height: 5px;
+            background-color: #1f2431;
+            border-radius: 10px;
             overflow: hidden;
         }
 
@@ -174,74 +191,106 @@
             height: 100%;
             width: 100%;
             background-color: var(--primary-blue);
-            border-radius: 3px;
+            border-radius: 10px;
             transition: width 1s linear;
+        }
+
+        /* Przycisk wpisywania ręcznego pod paskiem */
+        .manual-btn {
+            margin-top: 25px;
+            width: 100%;
+            max-width: 280px;
+            padding: 14px;
+            background-color: transparent;
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
         }
 
         /* Ekran Sukcesu Weryfikacji */
         .success-card {
-            background-color: #1c1c1e;
-            border-radius: 20px;
-            padding: 40px 30px;
+            background-color: var(--bg-dark);
+            border-radius: 24px;
+            padding: 35px 25px;
             text-align: center;
             width: 100%;
-            max-width: 340px;
-            border: 1px solid rgba(48, 209, 88, 0.2);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            max-width: 320px;
+            border: 1px solid #1f2d24;
         }
 
         .success-icon {
-            width: 80px;
-            height: 80px;
-            background-color: rgba(48, 209, 88, 0.1);
-            border: 3px solid var(--success-green);
+            width: 70px;
+            height: 70px;
+            background-color: rgba(46, 204, 113, 0.1);
+            border: 2px solid var(--success-green);
             color: var(--success-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
-            margin: 0 auto 24px auto;
-            font-weight: bold;
+            font-size: 32px;
+            margin: 0 auto 20px auto;
         }
 
         .success-title {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .success-desc {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--text-muted);
             line-height: 1.4;
         }
 
-        /* Dolna nawigacja */
+        /* Dolne Menu Nawigacji */
         .bottom-nav {
             background-color: var(--bg-dark);
-            border-top: 1px solid #1c1c1e;
-            padding: 12px 20px 25px 20px;
+            border-top: 1px solid var(--border-color);
+            padding: 10px 10px 24px 10px;
             display: flex;
             justify-content: space-around;
-            font-size: 11px;
-            color: var(--text-muted);
-            text-align: center;
         }
 
         .nav-item {
-            opacity: 0.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 11px;
+            font-weight: 400;
+            text-decoration: none;
+            width: 60px;
             cursor: pointer;
         }
 
         .nav-item.active {
             color: var(--primary-blue);
-            opacity: 1;
         }
 
         .nav-icon {
             font-size: 22px;
             margin-bottom: 4px;
+        }
+
+        /* Ikona niestandardowa dla mObywatela */
+        .nav-icon.qr-icon {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--text-muted);
+            border-radius: 6px;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .nav-item.active .nav-icon.qr-icon {
+            border-color: var(--primary-blue);
         }
     </style>
 </head>
@@ -249,54 +298,70 @@
 
     <header class="app-header">
         <div class="back-btn" onclick="resetApp()">&lt; Kod QR</div>
-        <div class="header-title" id="page-title">Mój kod QR</div>
-        <div style="width: 50px;"></div>
+        <div class="header-title" id="page-title">Zeskanuj ten kod QR</div>
+        <div class="help-icon">?</div>
     </header>
 
-    <main id="qr-screen" class="screen">
-        <div class="qr-container" onclick="simulateVerification()">
-            <div class="corner top-left"></div>
-            <div class="corner top-right"></div>
-            <div class="corner bottom-left"></div>
-            <div class="corner bottom-right"></div>
-            
-            <img src="obraz.png" alt="Kod QR" class="qr-image-src" id="qr-image">
-        </div>
-
-        <div class="timer-section" id="timer-box">
-            <p class="timer-text">Kod wygaśnie za:</p>
-            <div class="timer-countdown" id="countdown">03:00</div>
-            <div class="progress-bar-container">
-                <div class="progress-bar-fill" id="progress-fill"></div>
+    <div class="main-content">
+        
+        <main id="qr-screen" class="screen">
+            <div class="qr-wrapper" onclick="simulateVerification()">
+                <div class="corner top-left"></div>
+                <div class="corner top-right"></div>
+                <div class="corner bottom-left"></div>
+                <div class="corner bottom-right"></div>
+                
+                <div class="qr-container">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIEAYAAAD9yconAAAABmJLR0QA/wD/APgvaeTAAAAEZ0lEQVR4nO3bu3LbMAwF0Pr/P527mU7q2LIgCRAA8V7XmU4msS9wLgAE8u7vBwA4w4IAnGFBAM6wIABnWBCA9bMOfCq9f1ofn/18+7b5ftvO8uOnz7ffYf7bPr7b9uXvP923r9v5D29fX7v93L9/7fPtevs6y7X37RzXtptf9+bLtl/7bttX9+3r37/7/WvL5Xbby9uW++PrfPvbLfv/z/8ZzV9060vL9fH8S9vWlrbL5TzLfH9u/zrefrf5eeu77ff9vO/vN7/+vYff+tPy0L/+vN/60/7w++XbVsvv9eXp7ctXb/3tY8vrWv48/fF5/+0Mv1//++bXv9f8ffPz3v69ZfXpXy39bVttvdf3Zf5787Fv/YpL/+2r29eXf/92t9tZ+i8P69OfN78Pfv/Wp9v99vUe+m/f8vvttvX+/PnY3bavP3wZun//4ct/f/gy76H/8mX+/fBlt3OfW37609uXtXwZunwZfP/9623Lw5cfvgz968PLWp76e9vW8tTfy/v7+q9u+2/fv768v399+ffPl29fH//Vw8/fH1++ff/++vOvt5f3P//p8/P3t7efr/18X8vL+7XltS0Pz79/u93b1v+8vPx+/un23zdf/vXz5c9vXz7ffLnNf++3fOxt+9u++bH32770X/792+Yv+t7T1m/fH0//9/H05fPPr3OfL+/v7dvXea4tv1/mPx/X9vPx+XFtedh+ftvytC//beX529K/2/7+/Wv7/fK6+evt6/3++evLy/N3W57XtpY/T18PPe1Pfe/z48v893a7tqXvdva25aG3bfPh58Pvh9/vfX58+7Lt97YsL2vLw8vbtb19vX88XNsvL9v8ffPl7ffXtl+e17ZtbV8H3n++bfm9X3Hpv6zdblvub0v7bkv7bku7bWf5vV/xe7/ilv95bftufp2l/fbtbkvfber9ts1X2vx9P/+u/7fW58u/+vh8vYfmS+v/X+unX2/+fPPlbUv77fN8uK/v58v7+/Pl68/fPvef/m9Z+vSntr/tvP6VvvefL5vPfbvbeftXy+rz7beZ9re2/OnXm/+/vD5P/+/H5f/fNn/R/P0v73++tnz8efO3z9/+8GW/+u7zX3eWf/+Zf99v++bH+fC5b3mYf/v4fH59fL6Xf/WwPf3fWnpvfy/v7+th+W9L321p/29bep93lm67tptv+xUAs8KCAJxhQQDOsCAAZ1gQgDMsCMAZFgTgDAsCcIYFATjDggCcYUEAzrAgAGdYEIAzLAjAGRYE4AwLAnCGBQE4w4IAnGFBAM6wIABnWBCAMywIwBkWBOAMCwJwhgUBOOOnHfiD7RcA8L9gQQDOsCAAZ1gQgDMsCMAZFgTgDAsCcIYFATjDggCcYUEAzrAgAGdYEIAzLAjAGRYE4AwLAnCGBQE4w4IAnGFBAM6wIABnWBCAMywIwBkWBOAMCwJwhgUBOOOnHfiE7Uv77bZ9335u0z//9vFty1PLN//80yctD69/vX18/rctt/ltb/v680+fn5+ftix9Pn9u29b8ubaf/3zbvunXP/68225r3/RbfnrbsuWb5V/9aUtb/v9325af/vR/+3Ztfbe19PPNh7atPby3bfPxXpbfD9fHlre15aG3bfO5W1+av97aPv68eetPv7Zff/7vP17/bVvu5eW+3f7Vcrvfvn37ct/O/Xf3bbl9/en3y/P3m38F/m73Zf7j6+9P3778frf7+u7bt+X98bV//nrfPv77t9f/vX35+Nu7PfQ/H97uof/P56G3LffN75/fP7z19/XQv8x9aMufp8vPv33bfXv52LffvrWv69bTvrUvW5av5639fvPr39LPPy+v//Xpfbtt3/Rfe59PfWtfp5e/tWXLtS1ft/u6tX39t33bfP6W+e9/9XDf3NfDtnm///+BfWl/X/v1+fDty++399f/vS3Nf8WvLfdteVv7Y9u2LffN79/+K/798WW7/9Xbt99v25f778vLtv2LvvVpft03P9/8/enL37a/L5/768+3ffnx88vH9uWpt+/b06/ffu3fP/w//H/9u/fHlrdN//YvD709fN5s+fbnt6++bftv5/+b9fT//fUvPv6rj6d/+7+v9dDbmv9+ue+H3m53W9u2bctD8//bV/vvX1p+uvnxbaulfbfXv//y+tPTN7+G9/XpbdvWlv+5bWvv7X7v0zZfaZmv/tU///b5+vvb2rZ8feq+bNn6vN1um++19Xb75vep3Vd++unf0i+vj68t/3rbPr//D1XwGgZ/p2CgAAAABJRU5ErkJggg==" alt="Kod QR" class="qr-image-src" id="qr-image">
+                </div>
             </div>
-        </div>
-    </main>
 
-    <main id="success-screen" class="screen hidden">
-        <div class="success-card">
-            <div class="success-icon">✓</div>
-            <h2 class="success-title">Zweryfikowano pomyślnie</h2>
-            <p class="success-desc">Tożsamość i ważność dokumentu zostały potwierdzone w systemie centralnym.</p>
-        </div>
-    </main>
+            <div class="timer-section" id="timer-box">
+                <p class="timer-text">Kod wygaśnie za:</p>
+                <div class="timer-countdown" id="countdown">03:00</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <button class="manual-btn">Wpisz kod ręcznie</button>
+        </main>
+
+        <main id="success-screen" class="screen hidden">
+            <div class="success-card">
+                <div class="success-icon">✓</div>
+                <h2 class="success-title">Zweryfikowano pomyślnie</h2>
+                <p class="success-desc">Tożsamość i ważność dokumentu zostały potwierdzone w systemie centralnym.</p>
+            </div>
+        </main>
+
+    </div>
 
     <nav class="bottom-nav">
         <div class="nav-item">
             <div class="nav-icon">📇</div>
             <div>Dokumenty</div>
         </div>
+        <div class="nav-item">
+            <div class="nav-icon">📁</div>
+            <div>Usługi</div>
+        </div>
         <div class="nav-item active">
-            <div class="nav-icon">🔳</div>
+            <div class="nav-icon qr-icon"></div>
             <div>Kod QR</div>
         </div>
         <div class="nav-item">
-            <div class="nav-icon">⚙️</div>
+            <div class="nav-icon">🔍</div>
+            <div>Szukaj</div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">⣿</div>
             <div>Więcej</div>
         </div>
     </nav>
 
     <script>
-        const TOTAL_TIME = 180; // 3 minuty
+        const TOTAL_TIME = 180; // 3 minuty (180 sekund)
         let timeLeft = TOTAL_TIME;
         let timerInterval;
 
@@ -324,11 +389,12 @@
                     countdownEl.style.color = "#ef4444";
                     progressFillEl.style.backgroundColor = "#ef4444";
                     qrImage.style.opacity = "0.1";
-                    document.querySelector('.qr-container').style.pointerEvents = "none";
+                    document.querySelector('.qr-wrapper').style.pointerEvents = "none";
                 }
             }, 1000);
         }
 
+        // Symulacja akcji po poprawnym odczytaniu kodu przez drugi telefon
         function simulateVerification() {
             clearInterval(timerInterval);
             document.getElementById('qr-screen').classList.add('hidden');
@@ -336,6 +402,7 @@
             document.getElementById('page-title').innerText = 'Status weryfikacji';
         }
 
+        // Resetowanie aplikacji przy powrocie
         function resetApp() {
             clearInterval(timerInterval);
             timeLeft = TOTAL_TIME;
@@ -344,11 +411,11 @@
             document.getElementById('progress-fill').style.width = "100%";
             document.getElementById('progress-fill').style.backgroundColor = "var(--primary-blue)";
             document.getElementById('qr-image').style.opacity = "1";
-            document.querySelector('.qr-container').style.pointerEvents = "auto";
+            document.querySelector('.qr-wrapper').style.pointerEvents = "auto";
             
             document.getElementById('success-screen').classList.add('hidden');
             document.getElementById('qr-screen').classList.remove('hidden');
-            document.getElementById('page-title').innerText = 'Mój kod QR';
+            document.getElementById('page-title').innerText = 'Zeskanuj ten kod QR';
             startTimer();
         }
 
